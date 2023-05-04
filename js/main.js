@@ -5,7 +5,9 @@
 // Adesso rimuoviamo tutto il markup statico e inseriamo tutte le immagini dinamicamente servendoci dell’array fornito e un semplice ciclo for che concatena un template literal.
 let img = ["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"];
 console.log(img);
-let element = document.createElement(`<img src= ${img (1) } >`);
+
+let element = document.createElement("img");
+element.innerHTML = `<img src = ${img(1)}></div>`
 let imgContainer = document.querySelector(".container_img");
 imgContainer.append(element);
 
