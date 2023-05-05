@@ -5,11 +5,26 @@
 // Adesso rimuoviamo tutto il markup statico e inseriamo tutte le immagini dinamicamente servendoci dell’array fornito e un semplice ciclo for che concatena un template literal.
 let img = ["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"];
 console.log(img);
+let element = document.querySelector(".container_img");
+console.log(element);
 
-let element = document.createElement("img");
-element.innerHTML = `<img src = ${img(1)}></div>`
-let imgContainer = document.querySelector(".container_img");
-imgContainer.append(element);
+
+for(let i = 0; i < img.length; i++) {   
+    imagePosition = 0 + i;
+    
+    let image = img [i]
+    element.innerHTML += `<img src="${image}">`;
+
+        if (imagePosition = i) {
+            element.classList.add("active");
+        }
+}
+
+
+
+
+
+
 
 // Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specifica che la renderà visibile.
 
@@ -17,4 +32,7 @@ imgContainer.append(element);
 // Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente attraverso JavaScript.
 
 
-// Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
+// Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente. 
+
+
+
